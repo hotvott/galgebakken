@@ -1,0 +1,155 @@
+body {
+      margin: 0;
+      padding: 0;
+	  background-color: black;
+	  z-index: -1; 
+	  position:relative;
+}
+ 
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../bildeforslag/dysto.jpg);
+    background-size: cover;
+	opacity: 0.7;  
+	display: grid;
+	grid-template-columns: repeat(1fr 1fr 1fr 1fr 1fr 1fr);
+	grid-template-rows: repeat(4, minmax(180px, auto));
+	margin: 0 auto;
+}
+
+.headline {
+	grid-column: 2;
+}
+
+.text {
+	grid-column: 1/7;
+	background-color: black;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 100%;
+	color: #4A412A; /* The ugliest colour in the world*/
+	text-align: left;
+	padding: 10px;
+	padding-top: 10px;
+	padding-left: 12.5%;
+	z-index: 1000; 
+	position:relative;
+}
+ 
+.container:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      opacity: 0.7;
+      mix-blend-mode: color-burn;
+}
+ 
+.container:before {
+      animation: animate 0.5s infinite;
+	  -webkit-animation: animate 0.5s infinite;
+}
+ 
+@keyframes animate {
+      0% {
+            background-position: 0 0;
+            filter: hue-rotate(0deg);
+      }
+      10% {
+            background-position: 4px 0;
+			background: url(../bildeforslag/dis.jpg);
+			background-size: cover;
+			
+      }
+      20% {
+            background-position: -4px 0;
+			background: url(../bildeforslag/dis.jpg);
+			background-size: cover;
+      }
+      30% {
+            background-position: 12px 0;
+			background: url(../bildeforslag/sea.jpg);
+			background-size: cover;
+      }
+      40% {
+            background-position: -16px 0;
+			background: url(../bildeforslag/view2.jpg);
+      }
+      50% {
+            background-position: -24px 0;
+			background: url(../bildeforslag/sea.jpg);
+			background-size: cover;
+      }
+      60% {
+            background-position: -52px 0;
+			background: url(../bildeforslag/water.jpg);
+			background-size: cover;
+      }
+      70% {
+            background-position: 0 22px;
+			background: url(../bildeforslag/water.jpg);
+			background-size: cover;
+      }
+      80% {
+            background-position: -40px -10px;
+			background: url(../bildeforslag/rocks.jpg);
+			background-size: cover;
+      }
+      100% {
+            background-position: 0 0;
+            filter: hue-rotate(360deg);
+      }
+}
+
+img {
+	display: none;
+}
+
+h1 {
+	font-size: 500%;
+	text-align: left;
+	font-family: 'Special Elite', cursive;
+	color: red;
+	z-index: 11000; 
+	position:relative;
+}
+
+
+a:link {
+	color: #4A412A;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	font-size: 150%;
+}
+
+a:visited {
+    color: #4A412A;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	font-size: 150%;
+}
+
+a:hover {
+    color: red;
+	text-decoration: none;
+	transition-duration: 1s;
+	transition-delay: 1s;
+}
+
+a:active {
+    color: #4A412A;
+	border-bottom: 1px solid;
+	text-decoration: none;
+}
+
+.lineTwo {
+	display: none;
+}
+
+.css2 {
+	display: none;
+}
